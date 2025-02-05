@@ -9,12 +9,28 @@
  */
 
 export function minBy(array, cb) {
-  // Your code goes here...
+    let minElement = array[0];
+
+    for (let element of array) {
+      if (cb(element) < cb(minElement)) {
+        minElement = element;
+      }
+    }
+  
+    return minElement;
 
 }
 
 export function maxBy(array, cb) {
-  // Your code goes here...
+  let maxElement = array[0];
+
+  for (let element of array) {
+    if (cb(element) > cb(maxElement)) {
+      maxElement = element;
+    }
+  }
+
+  return maxElement;
 
 }
 
